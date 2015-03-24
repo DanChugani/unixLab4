@@ -1,3 +1,14 @@
+/* Author: Chandan Chugani
+// Date: March 24th, 2015 
+// Professor: Leon King
+// Description: This program reads a group from /etc/group 
+//	looks it up in /etc/passwd and if it exists writes 
+//	to a file called users.txt.No errors to report,however
+//	if you load no argv, program will seg fault...
+//	View this repository on gitHub!
+//
+// GitHub: https://github.com/DanChugani/unixLab4 
+*/
 #include <stdio.h>
 #include <grp.h>
 #include <pwd.h>
@@ -9,7 +20,7 @@ struct group *groupName;
 struct passwd *pwdRec;
 char ** p;
 FILE *f;
- /*Open/make a file called user.txt */
+ /* Open/make a file called users.txt */
  f = fopen("users.txt","w");
 	if (f==NULL) /*check and make sure file is empty*/
 	{
